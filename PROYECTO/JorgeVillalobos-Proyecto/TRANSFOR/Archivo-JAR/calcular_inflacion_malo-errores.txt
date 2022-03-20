@@ -1,0 +1,61 @@
+00001       PROGRAM CALCULAR_INFLACION
+00002                             
+00003       !***********************************************************************
+00004       !* Asumiendo tasas de inflacion anual de 7%, 8%, y 10%,                *
+00005       !* encontrar el FACTOR por el cual cualquier moneda, tales como        *
+00006       !* el franco, el dolar, la libra esterlina, el marco, el rublo, el yen *
+00007       !* o el florin han sido devaluadas en 1, 2, ...., N anos.              *
+00008       !***********************************************************************
+00009                             
+00010       INTEGER  MAX_ANOS1001234567890123456789012345, ANO
+       Error 002: El nombre del identificador tiene que ser menor a 30 dígitos.
+00011       REAL      FACTOR1, FACTOR2, FACTOR3
+00012       CHARACTER NOSEUSA
+00013       DOUBLE PRECISION SUMA_NO_USADA
+00014                             
+00015       ! Inicio del programa CALCULAR_INFLACION
+00016                             
+00017       ! Entrada de datos
+00018 10000      PRINT*
+00019 10060      PRINT*
+00020 10080      PRINT*, 'POR FAVOR, indique la cantidad maxima de anos:'
+00021 10050      READ*, MAX_ANOS
+       Error 013: La variable debe haber sido definida previamente.
+00022                             
+00023       IF ( MAX_ANOS . LE. 0 ) THEN
+       Error 013: La variable debe haber sido definida previamente.
+       Error 034: El operador relacional no es válido.
+00024          STOP 
+00025          GOTO 999999
+       Error 020: El formato de la etiqueta no es el correcto.
+       Error 023: La etiqueta debe haber sido definida.
+00026       ENDIF
+00027       ! Inicializacion de variables
+00028                             
+00029       ANO     = 0
+00030       FACTOR1 = 1.0
+00031       FACTOR2 = 1.0
+00032       FACTOR3 = 1.0
+00033                             
+00034       ! Calculos y salida de datos
+00035                             
+00036       PRINT*
+00037       PRINT*, '        ANO   7%               8%              10%'
+00038       PRINT*
+00039       DO ANO = FACTOR1, MAX_ANOS
+       Error 027: El tipo de la variable no es Integer.
+       Error 013: La variable debe haber sido definida previamente.
+00040         FACTOR1 = ( FACTOR1 *                                           &
+00041      &                    1.07 )
+00042         FACTOR2 = ( FACTOR2 ) * 1.08
+00043         FACTOR3 = FACTOR3 * ( 1.10 )
+00044         PRINT*, ANO, FACTOR1, FACTOR2, FACTOR3
+00045       ENDDO
+00046       PRINT*
+00047       STOP '*** FIN DEL PROGRAMA NORMAL ***
+       Error 025: Cantidad de comillas simples incorrecta.
+       Error 026: La estructura del comando STOP contiene errores.
+00048       PRINT*
+00049 99999 ENDPROGRAM
+00050                             
+00051       ! Fin del programa CALCULAR_INFLACION

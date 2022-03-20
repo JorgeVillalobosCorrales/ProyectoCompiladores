@@ -1,0 +1,87 @@
+00001       !Tarea 1. El identificador del program es incorrecto no cumple con las regla del nombre
+00002       PROGRAM 1CALCULAR_INFLACION 
+       Error 005: El nombre del identificador tiene que iniciar con una letra.
+00003       !! Tarea 1. definicion de comentario 
+00004       !***********************************************************************
+00005       !* Asumiendo tasas de inflacion anual de 7%, 8%, y 10%,                *
+00006       INTEGER   MAX_ANOS, ANO
+00007       REAL      FACTOR1, FACTOR2, FACTOR3
+00008  ! declaracion de variables
+00009       CHARACTER NOSEUSA
+00010       DOUBLE PRECISION SUMA_NO_USADA
+00011       !Tarea 1. No deberia dar error porque es una palabra reservada de FORTRAN
+00012 	  LOGICAL X 
+00013 	  !Tarea 1. Error: No tiene tipo de dato
+00014 	  TOTAL 
+       Error 013: La variable debe haber sido definida previamente.
+00015       
+00016 10000      PRINT*
+00017 10060      PRINT*
+00018       !!Tarea 1. Error: hay error 112 lineas  
+00019 10080      PRINT*, 'POR FAVOR, indique la cantidad maxima de anos que desea que se calculen con este programa:'   
+       Error 001: La línea excede los 80 caracteres permitidos
+00020        
+00021       !Tarea 2.Error: al siguiente linea le falta la coma debe dar error
+00022 10050      READ* MAX_ANOS
+       Error 014: La coma es obligatoria después de READ*
+00023      
+00024       IF ( MAX_ANOS .LE. 0 ) THEN 
+00025          STOP '*** FIN DEL PROGRAMA PORQUE INDICO 0 ANOS ***'
+00026          GOTO 99999
+00027       ENDIF
+00028         
+00029       !Proyecto. Error falta un parentesis y la palabra THEN pt6
+00030       IF ( MAX_ANOS .LE. 0
+       Error 033: Cantidad de Parentesis incorrecta.
+       Error 035: La palabra THEN debe aparecer.
+00031         
+00032           PRINT*
+00033       !Proyecto. Error no hay una linea de comando luego del ELSE
+00034       ELSE	  
+00035       ENDIF
+00036         	  
+00037       !Tarea 1. Error: la variable esta en una posicion incorrecta
+00038 ANO     = 0
+00039       FACTOR1 = 1.0
+00040       FACTOR2 = 1.0
+00041       FACTOR3 = 1.0
+00042       !Tarea 2. Error:La siguiente linea no debe dar error porque es un comando de FORTRAN
+00043       READ 
+00044       !Proyecto. Error porque la linea no tiene fin de comilla pt4
+00045       STOP 'DETENER LA LECTURA
+       Error 026: La estructura del comando STOP contiene errores.
+00046       PRINT*
+00047       PRINT*, '        ANO   7%               8%              10%'
+00048       PRINT*
+00049       DO ANO = 1, MAX_ANOS
+00050        !Tarea 1. Error: falta el simbo ampersam en multilinea
+00051         FACTOR1 = ( FACTOR1 *                                          &
+00052                          1.07 )
+       Error 013: La variable debe haber sido definida previamente.
+00053         FACTOR2 = ( FACTOR2 ) * 1.08
+00054         FACTOR3 = FACTOR3 * ( 1.10 )
+00055         PRINT*, ANO, FACTOR1, FACTOR2, FACTOR3
+00056       ENDDO
+00057       	  
+00058       !Proyecto. Error la variable limite no existe pt5
+00059       DO ANO = 1, LIMITE
+       Error 013: La variable debe haber sido definida previamente.
+00060         PRINT*	  
+00061       ENDDO
+00062       		
+00063       !Proyecto. Error no existe la etiqueta 15000 pt3
+00064       GOTO 15000
+00065       !Tarea 2. ValidaciÃ³n: La siguiente linea no debe dar error porque es un comando de FORTRAN
+00066       PRINT
+00067 15000 STOP '*** FIN DEL PROGRAMA NORMAL ***'
+00068       PRINT*
+00069       !Tarea 2. Error: la siguiente linea debe dar error porque la variable de la derecha no existe
+00070       TOTAL = SALARIO
+       Error 013: La variable debe haber sido definida previamente.
+00071       !Tarea 2. Error: La siguiente linea tiene error por la ubicacion de la etiqueta
+00072     99999 ENDPROGRAM
+00073       	
+00074      ! Tarea 2. Error: este endprogram sale sobrando debe dar error.
+00075       ENDPROGRAM
+       Error 022: EL comando ENDPROGRAM no debe aparecer dos veces.
+00076       	  
